@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>纪纯瑜 | J.Celle Yu | UX/UI设计师作品集</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <style>
+    body {
+        font-family: 'Helvetica Neue', sans-serif;
+        background-color: #ffffff;
+    }
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .font-My{
+        font-family: "MyCustomFont", sans-serif;
+    }
+    nav{
+        font-size: 20px !important;
+    }
+</style>
+</head>
+<body class="min-h-screen py-20">
+<!-- 顶部导航 -->
+<header class="fixed top-0 left-0 w-full bg-white z-50 px-6 py-10 flex justify-between items-center">
+    <div class="text-2xl font-bold tracking-tight">JCY</div>
+    <nav class="hidden md:flex space-x-16 text-base text-gray-400 ">
+<!--        <a href="#" class="hover:text-black transition-colors">List</a>-->
+        <a href="home.html" class="text-black font-bold border-black pb-1">Projects</a>
+        <a href="about.html" class="hover:text-black transition-colors">About</a>
+        <a href="contact.html" class="hover:text-black transition-colors">Contact</a>
+    </nav>
+</header>
+
+<!-- 轮播主体 -->
+<canvas id="canvas" class="wrp"></canvas>
+<!-- 底部信息 -->
+<footer class="fixed bottom-0 left-0 w-full bg-white px-6 py-5 flex items-center border-t border-gray-100">
+    <!-- 左侧：固定宽度不挤压 -->
+    <div class="w-1/4 text-left italic">
+        <p class="text-base">J.Celle Yu</p>
+        <p class="text-base">Creative Developer</p>
+    </div>
+    <!-- 中间：永远居中 -->
+    <div class="flex-1 flex justify-center items-center space-x-2" id="indicatorWrap">
+    </div>
+    <!-- 右侧：固定宽度不挤压 -->
+    <div class="w-1/4 text-right text-2xl tracking-tight font-My" id="infoText">
+        JDP 京东产发国际官网
+    </div>
+</footer>
+<script src="./js/JS.js"></script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>toyo tries | J.Celle</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/misans@3.0.0/css/misans.min.css">
+    <style>
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .font-My {
+            font-family: "MyCustomFont", sans-serif;
+            display: block;
+        }
+
+        nav {
+            font-size: 20px !important;
+        }
+
+        video {
+            width: 60%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        #carouselCanvas {
+            display: block;
+            width: 100%;
+            height: 700px;
+            cursor: grab;
+        }
+    </style>
+</head>
+<body class="min-h-screen pt-20 px-6">
+
+<!-- 返回顶部按钮 -->
+<div class="back-to-top" id="">↑</div>
+
+<!-- 顶部导航 -->
+<header class="fixed top-0 left-0 w-full backdrop-blur-sm bg-white/30 z-50 px-6 py-10 flex justify-between items-center">
+    <div class="text-2xl font-bold tracking-tight"><a href="home.html">JCY</a></div>
+    <nav class="hidden md:flex space-x-32 text-base text-gray-400 ">
+        <a href="home.html" class="text-black font-bold border-black pb-1">Projects</a>
+        <a href="about.html" class="hover:text-black transition-colors">About</a>
+        <a href="contact.html" class="hover:text-black transition-colors">Contact</a>
+    </nav>
+</header>
+
+<!--title-->
+<div class="wrp">
+    <div class="text-banner-wrap ">
+        <div class="text-8xl italic pt-40 pb-8 font-My text-animate-up">TOYO TRIES 仓储与增值服务小程序</div>
+    </div>
+    <div class="banner-wrap image-container">
+        <img class="banner-img scroll-scale-img" src="./images/toyo/banner.png" alt="" srcset="">
+    </div>
+
+    <!-- 项目信息-->
+    <div class="grid grid-cols-12 gap-12 pt-16">
+        <div class="grid-cols-none"></div>
+        <div class="grid-rows-5 text-gray-500 text-xl font-normal">
+<!--            <div class="pb-4">地点</div>-->
+            <div class="pb-4">类型</div>
+            <div class="pb-4">行业</div>
+            <div class="pb-4">年份</div>
+<!--            <a class="text-gray-400" href="https://jingdongproperty.com/" target="_blank">Visit site</a>-->
+        </div>
+        <div class="grid-rows-4 col-span-2 font-medium text-xl">
+<!--            <div class="pb-4">全球</div>-->
+            <div class="pb-4">交互/移动应用</div>
+            <div class="pb-4">轮胎</div>
+            <div>2023</div>
+        </div>
+    </div>
+
+    <!-- 项目简介-->
+    <div class="grid grid-cols-12 gap-12 pt-6">
+        <div class="grid-cols-none col-span-4"></div>
+        <div class="col-span-7 text-2xl font-light project-intro">
+            TOYO TIRES 增值服务小程序以 “Tech-Infused Reliability・全周期守护・极致便捷体验”（科技赋能信赖・全周期安心守护・极致便捷体验）为核心设计理念，面向全国车主、授权经销商与行业用户，打造一套专业、可靠、数字化的轮胎全生命周期服务小程序体系。设计融合日系精工美学与现代极简交互，在清晰高效的功能架构中传递技术可靠、服务贴心、创新便捷的品牌气质。        </div>
+    </div>
+
+    <!-- 官网首页-->
+    <div class="pt-24 relative">
+        <img src="images/toyo/toyo1.png" class="object-cover" alt="">
+    </div>
+
+    <div class="grid grid-cols-12 gap-12 pt-16">
+        <div class="col-span-2 grid-cols-none"></div>
+        <div class="col-span-8 font-light project-intro text-3xl">
+            我在职期间加入TOYO轮胎增值服务小程序项目，担任团队UX设计师，主导小程序整体用户体验设计；设计以日系精工美学与便捷交互为基底，打造视觉简洁、操作高效的轮胎服务类小程序，精准传递TOYO轮胎技术可靠、服务贴心、便捷省心的品牌内核，适配车主全周期轮胎服务需求。
+        </div>
+    </div>
+
+    <div class="pt-24 relative flex justify-end">
+        <img src="images/toyo/toyo2.png" class="object-cover" alt="">
+    </div>
+    <!-- 网页端 图片从上往下展开 -->
+<!--    <canvas id="carouselCanvas" class="w-full h-[500px] block cursor-grab"></canvas>-->
+    <!--    其他作品链接-->
+    <div class="flex justify-between items-center pt-24 pb-6">
+            <div class="text-4xl italic font-My">国网无人机巡检</div>
+            <div class="text-3xl"><a href="gaobi.html">Next project</a></div>
+    </div>
+    <div class="image-container">
+        <img class="" src="./images/gaobi/bannerbt.png" alt="" srcset="">
+    </div>
+    <!--    合作-->
+    <div class="pt-20 text-4xl grid grid-cols-3">
+        <div class="col-span-2 ">I partner with brands and studios that care about clarity, craft and a
+            point of view. Let’s talk.
+        </div>
+    </div>
+    <div class="pt-16 text-4xl font-bold grid grid-cols-3">
+        <div class="col-span-2">
+            <a href="mailto:jcy9421@gmail.com" class="inherit-style">jcy9421@gmail.com</a>
+        </div>
+    </div>
+    <div class="pt-32 text-6xl font-bold grid font-My uppercase grid-cols-3">
+        <div class="col-span-2 hover-letter-animate">JAY CELLE YU</div>
+        <div class="col-span-2 leading-normal hover-letter-animate">Frontend Creative Designer</div>
+    </div>
+    <!-- 联系方式 star-->
+    <div class=" pt-12">
+        <div class="flex grid grid-cols-4 gap-16">
+            <div class="grid-rows-4 text-xl">
+                <div class="pb-4 font-bold">Social</div>
+                <div class="slh">
+                    <a href="https://www.linkedin.com/in/chunyu-ji-60243b374/">Linkedin</a>
+                </div>
+                <div class="slh">
+                    <a href="https:////github.com/jcy9421">Github</a>
+                </div>
+            </div>
+            <div class="grid-rows-4 text-xl">
+                <div class="pb-4 font-bold">Pages</div>
+                <div class="slh">
+                    <a href="home.html">Projects</a>
+                </div>
+                <div class="slh">
+                    <a href="about.html">About</a>
+                </div>
+                <div class="slh">
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="grid-rows-4 text-xl">
+                <div class="pb-4 font-bold">Contact</div>
+                <div class="slh">+8613180777220</div>
+                <div class="slh">jcy9421@gmail.com</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="flex justify-between items-center pt-16 pb-4">
+    <div class="font-light"><span class="font-bold">© 2026</span> All rights reserved</div>
+    <div id="backToTop" class="cursor-pointer">Back to top</div>
+</div>
+<script src="./js/subpage.js"></script>
+<script src="./js/JS.js"></script>
+<script>
+    // ==============================================
+    document.addEventListener('DOMContentLoaded', () => {
+        const canvas = document.getElementById('carouselCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // 👉 你的图片
+        const imageSources = [
+            './images/jdp/c01.png',
+            './images/jdp/c02.png',
+            './images/jdp/c03.png',
+            './images/jdp/c04.png',
+            './images/jdp/c05.png',
+        ];
+
+        // 🔥 核心：全部调慢，手感更高级
+        const GAP = 24;
+        let IMG_WIDTH = 0;
+        let IMG_HEIGHT = 0;
+        let offsetX = 0;
+        let isDragging = false;
+        let startX = 0;
+        let lastOffset = 0;
+        let velocity = 0;
+        const FRICTION = 0.93;      // 减速更强
+        const DRAG_SPEED = 0.35;    // 🔥 拖拽速度降低（越小越慢）
+
+        const images = [];
+        let loadedCount = 0;
+
+        // 自适应画布
+        function resizeCanvas() {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // 加载图片
+        imageSources.forEach((src) => {
+            const img = new Image();
+            img.src = src;
+            img.onload = () => {
+                loadedCount++;
+                if (loadedCount === 1) {
+                    IMG_WIDTH = img.width;
+                    IMG_HEIGHT = img.height;
+                }
+                if (loadedCount === imageSources.length) draw();
+            };
+            images.push(img);
+        });
+
+        // 绘制
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            const totalStep = IMG_WIDTH + GAP;
+            const totalLength = totalStep * images.length;
+
+            if (!isDragging) {
+                velocity *= FRICTION;
+                offsetX += velocity;
+            }
+
+            let loopX = offsetX % totalLength;
+            if (loopX > 0) loopX -= totalLength;
+
+            [-1, 0, 1].forEach((set) => {
+                images.forEach((img, i) => {
+                    const x = (canvas.width - IMG_WIDTH) / 2 + loopX + i * totalStep + set * totalLength;
+                    const y = (canvas.height - IMG_HEIGHT) / 2;
+                    if (img.complete) ctx.drawImage(img, x, y, IMG_WIDTH, IMG_HEIGHT);
+                });
+            });
+
+            requestAnimationFrame(draw);
+        }
+
+        // 🔥 拖拽速度降低
+        canvas.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.clientX;
+            lastOffset = offsetX;
+            velocity = 0;
+            canvas.style.cursor = 'grabbing';
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const dx = (e.clientX - startX) * DRAG_SPEED; // 🔥 这里减速
+            offsetX = lastOffset + dx;
+            velocity = dx * 0.5; // 惯性也减速
+        });
+
+        window.addEventListener('mouseup', () => {
+            isDragging = false;
+            canvas.style.cursor = 'grab';
+        });
+
+        // 移动端触摸
+        canvas.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            startX = e.touches[0].clientX;
+            lastOffset = offsetX;
+            velocity = 0;
+        });
+
+        window.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const dx = (e.touches[0].clientX - startX) * DRAG_SPEED;
+            offsetX = lastOffset + dx;
+        });
+
+        window.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8020.trade | J.Celle</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/misans@3.0.0/css/misans.min.css">
+    <style>
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .font-My {
+            font-family: "MyCustomFont", sans-serif;
+            display: block;
+        }
+
+        nav {
+            font-size: 20px !important;
+        }
+
+        video {
+            width: 60%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .image-container {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .scroll-scale-img {
+            will-change: transform;
+            transition: transform 0.3s ease;
+            display: block;
+        }
+
+
+    </style>
+</head>
+<body class="min-h-screen pt-20 px-6">
+
+<!-- 返回顶部按钮 -->
+<div class="back-to-top" id="">↑</div>
+
+<!-- 顶部导航 -->
+<header class="fixed top-0 left-0 w-full backdrop-blur-sm bg-white/30 z-50 px-6 py-10 flex justify-between items-center">
+    <div class="text-2xl font-bold tracking-tight"><a href="home.html">JCY</a></div>
+    <nav class="hidden md:flex space-x-32 text-base text-gray-400 ">
+        <a href="home.html" class="text-black font-bold border-black pb-1">Projects</a>
+        <a href="about.html" class="hover:text-black transition-colors">About</a>
+        <a href="contact.html" class="hover:text-black transition-colors">Contact</a>
+    </nav>
+</header>
+
+<!--title-->
+<div class="wrp">
+    <div class="text-banner-wrap ">
+        <div class="text-8xl italic pt-40 pb-8 font-My text-animate-up">8020.Trade</div>
+    </div>
+    <div class="banner-wrap image-container">
+        <img class="banner-img scroll-scale-img" src="./images/trade/banner.png" alt="" srcset="">
+    </div>
+
+    <!-- 项目信息-->
+    <div class="grid grid-cols-12 gap-12 pt-16">
+        <div class="grid-cols-none"></div>
+        <div class="grid-rows-5 text-gray-500 text-xl font-normal">
+            <div class="pb-4">Place</div>
+            <div class="pb-4">Type</div>
+            <div class="pb-4">Industry</div>
+            <div class="pb-4">Year</div>
+            <a class="text-gray-400" href="https://8020.trade/">Visit site</a>
+        </div>
+        <div class="grid-rows-4 col-span-2 font-medium text-xl">
+            <div class="pb-4">Australia</div>
+            <div class="pb-4">Web | APP | Visual Design</div>
+            <div class="pb-4">Crypto</div>
+            <div>2024-2025</div>
+        </div>
+    </div>
+
+    <!-- 项目简介-->
+    <div class="grid grid-cols-12 gap-12 pt-6">
+        <div class="grid-cols-none col-span-4"></div>
+        <div class="col-span-7 text-3xl font-light project-intro">
+            8020 is a self-custodial wallet for token storage and transfers across
+            major blockchains. It provides no exchange services. Users conduct token
+            swaps independently via permissionless decentralized protocols, and 8020
+            can never access your assets.
+        </div>
+    </div>
+
+    <!-- 移动端-->
+    <div class="pt-24 relative overflow-hidden">
+        <video id="scrollVideo" muted playsinline src="images/trade/8020.mp4" class="object-cover"></video>
+    </div>
+
+    <div class="grid grid-cols-12 gap-12 pt-16">
+        <div class="col-span-2 grid-cols-none"></div>
+        <div class="col-span-8 font-light project-intro text-3xl">
+            I joined the project during my employment. As the <strong><em>UX Designer</em></strong> of the team, I led
+            the overall <strong><em>UX Design</em></strong>
+            of the app, and partnered with the engineering and marketing teams to deliver design alignment, functional
+            testing and full product implementation.
+        </div>
+    </div>
+
+    <div class="relative grid grid-cols-2 pt-32 items-start overflow-hidden">
+        <div id="parallaxText" class="text-5xl project-intro grid app-intro pr-10 font-light">
+            <div class="gap-6" style="padding-top: 30rem;line-height: 3.5rem">
+                Basing the design on clean and modern editorial aesthetics, I created a visually striking website that
+                effectively communicates the security, transparency, and decentralized spirit of the 8020trade
+                self-custodial wallet.
+            </div>
+        </div>
+        <div class="flex">
+            <img id="appImage" src="./images/trade/app.png" alt="" class="h-auto max-h-[200vh] w-auto">
+        </div>
+    </div>
+
+    <!-- 网页端 图片从上往下展开 -->
+    <div class="flex w-full pt-6">
+        <div class="w-1/2 image-container relative overflow-hidden">
+            <img src="./images/trade/web.png" alt="" class="w-full h-auto object-contain scroll-scale-img">
+            <div class="reveal-overlay"></div>
+        </div>
+
+        <div class="w-1/2 image-container relative ml-4 overflow-hidden">
+            <img src="./images/trade/web2.png" alt="" class="w-full h-auto object-contain ml-4 scroll-scale-img">
+            <div class="reveal-overlay"></div>
+        </div>
+    </div>
+    <!--    其他作品链接-->
+    <div class="flex justify-between items-center pt-24 pb-6">
+        <div class="text-4xl italic font-My">JDP 国际官网</div>
+        <div class="text-3xl"><a href="jdp.html">Next project</a></div>
+    </div>
+    <div class="image-container">
+        <img class="" src="./images/trade/bottomnext.png" alt="" srcset="">
+    </div>
+    <!--    合作-->
+    <div class="pt-20 text-4xl grid grid-cols-3">
+        <div class="col-span-2 ">I partner with brands and studios that care about clarity, craft and a
+            point of view. Let’s talk.
+        </div>
+    </div>
+    <div class="pt-16 text-4xl font-bold grid grid-cols-3">
+        <div class="col-span-2">
+            <a href="mailto:jcy9421@gmail.com" class="inherit-style">jcy9421@gmail.com</a>
+        </div>
+    </div>
+    <div class="pt-32 text-6xl font-bold grid font-My uppercase grid-cols-3">
+        <div class="col-span-2 hover-letter-animate">JAY CELLE YU</div>
+        <div class="col-span-2 leading-normal hover-letter-animate">Frontend Creative Designer</div>
+    </div>
+    <!-- 联系方式 star-->
+    <div class=" pt-12">
+        <div class="flex grid grid-cols-4 gap-16">
+            <div class="grid-rows-4 text-xl">
+                <div class="pb-4 font-bold">Social</div>
+                <div class="slh">
+                    <a href="https://www.linkedin.com/in/chunyu-ji-60243b374/">Linkedin</a>
+                </div>
+                <div class="slh">
+                    <a href="https:////github.com/jcy9421">Github</a>
+                </div>
+            </div>
+            <div class="grid-rows-4 text-xl">
+                <div class="pb-4 font-bold">Pages</div>
+                <div class="slh">
+                    <a href="home.html">Projects</a>
+                </div>
+                <div class="slh">
+                    <a href="about.html">About</a>
+                </div>
+                <div class="slh">
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="grid-rows-4 text-xl">
+                <div class="pb-4 font-bold">Contact</div>
+                <div class="slh">+8613180777220</div>
+                <div class="slh">jcy9421@gmail.com</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="flex justify-between items-center pt-16 pb-4">
+    <div class="font-light"><span class="font-bold">© 2026</span> All rights reserved</div>
+    <div id="backToTop" class="cursor-pointer">Back to top</div>
+</div>
+<script>
+// <!--    window.addEventListener('load', () => {-->
+// <!--        document.body.classList.add('ani-open');-->
+// <!--        setTimeout(() => {-->
+// <!--            const cover = document.getElementById('pageCover');-->
+// <!--            if (cover) {-->
+// <!--                cover.style.opacity = 0;-->
+// <!--                setTimeout(() => cover.remove(), 600);-->
+// <!--            }-->
+// <!--        }, 300);-->
+// <!--    });-->
+
+// 视频滚动控制
+const video = document.getElementById('scrollVideo');
+video.pause();
+video.currentTime = 0;
+let ticking = false;
+
+function updateVideo() {
+const rect = video.getBoundingClientRect();
+const windowHeight = window.innerHeight;
+const videoHeight = video.offsetHeight;
+const start = windowHeight;
+const end = -videoHeight;
+const distance = start - end;
+const offset = start - rect.top;
+
+if (offset > 0 && offset < distance) {
+const progress = offset / distance;
+if (video.duration) {
+video.currentTime = video.duration * progress;
+}
+}
+ticking = false;
+}
+
+<!--    window.addEventListener('scroll', () => {-->
+<!--        if (!ticking) {-->
+<!--            window.requestAnimationFrame(updateVideo);-->
+<!--            ticking = true;-->
+<!--        }-->
+<!--    });-->
+
+<!--    // 视差文字-->
+<!--    const text = document.getElementById('parallaxText');-->
+<!--    const img = document.getElementById('appImage');-->
+<!--    const parent = text.parentElement;-->
+<!--    const slowFactor = 0.6;-->
+
+<!--    function rafLoop() {-->
+<!--        const winHeight = window.innerHeight;-->
+<!--        const parentRect = parent.getBoundingClientRect();-->
+<!--        const imgHeight = img.offsetHeight;-->
+<!--        const textHeight = text.offsetHeight;-->
+<!--        const scrollProgress = Math.min(1, Math.max(0, (-parentRect.top) / (parent.offsetHeight - winHeight)));-->
+<!--        const maxMove = imgHeight - textHeight;-->
+<!--        const y = scrollProgress * maxMove * slowFactor;-->
+<!--        text.style.transform = `translate3d(0, ${y}px, 0)`;-->
+<!--        requestAnimationFrame(rafLoop);-->
+<!--    }-->
+<!--    rafLoop();-->
+
+<!--    // 图片缩放-->
+<!--    const images = document.querySelectorAll('.scroll-scale-img');-->
+<!--    window.addEventListener('scroll', () => {-->
+<!--        const scrollTop = window.scrollY;-->
+<!--        const windowHeight = window.innerHeight;-->
+<!--        const docHeight = document.documentElement.scrollHeight;-->
+<!--        const scrollPercent = Math.min(1, scrollTop / (docHeight - windowHeight));-->
+<!--        const scale = 1 + scrollPercent * 0.1;-->
+<!--        images.forEach(img => {-->
+<!--            img.style.transform = `scale(${scale})`;-->
+<!--        });-->
+<!--    });-->
+
+<!--    // 图片从上往下展开动画-->
+<!--    document.addEventListener('DOMContentLoaded', () => {-->
+<!--        const containers = document.querySelectorAll('.image-container');-->
+<!--        const observer = new IntersectionObserver((entries) => {-->
+<!--            entries.forEach(entry => {-->
+<!--                if (entry.isIntersecting) {-->
+<!--                    entry.target.classList.add('in-view');-->
+<!--                }-->
+<!--            });-->
+<!--        }, {threshold: 0.15});-->
+<!--        containers.forEach(el => observer.observe(el));-->
+<!--    });-->
+
+<!--    // 返回顶部-->
+<!--    const backToTopBtn = document.getElementById('backToTop');-->
+<!--    window.addEventListener('scroll', () => {-->
+<!--        if (window.scrollY > 400) {-->
+<!--            backToTopBtn.classList.add('show');-->
+<!--        } else {-->
+<!--            backToTopBtn.classList.remove('show');-->
+<!--        }-->
+<!--    });-->
+<!--    backToTopBtn.addEventListener('click', () => {-->
+<!--        window.scrollTo({top: 0, behavior: 'smooth'});-->
+<!--    });-->
+
+<!--    document.addEventListener('DOMContentLoaded', function () {-->
+<!--        const elements = document.querySelectorAll('.hover-letter-animate');-->
+
+<!--        elements.forEach(el => {-->
+<!--            const text = el.textContent;-->
+<!--            let newHTML = '';-->
+
+<!--            for (let i = 0; i < text.length; i++) {-->
+<!--                const char = text[i];-->
+<!--                if (char === ' ') {-->
+<!--                    newHTML += ' ';-->
+<!--                } else {-->
+// <!--                    newHTML += `<span>${char}</span>`;-->
+// <!--                }-->
+// <!--            }-->
+//
+// <!--            el.innerHTML = newHTML;-->
+// <!--        });-->
+// <!--    });-->
+</script>
+<script src="./js/subpage.js"></script>
+<script src="./js/JS.js"></script>
+</body>
+</html>

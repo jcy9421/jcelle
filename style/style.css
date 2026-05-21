@@ -1,0 +1,217 @@
+@font-face {
+    font-family: "MyCustomFont";
+    src: url("../Fonts/houdihei.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+}
+
+@layer utilities {
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .nav-text {
+        font-family: 'Helvetica Neue', sans-serif;
+        letter-spacing: -0.02em;
+    }
+
+    .gallery-item {
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+        transform: scale(1.02);
+    }
+}
+
+.wrp {
+    padding: 0 1rem;
+}
+
+/* 轮播外部 文字容器 */
+.info-text {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    padding: 40px 0;
+    font-family: 'MyCustomFont', sans-serif;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.info-text.show {
+    opacity: 1;
+}
+
+/*footer*/
+.footer-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.footer-right {
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.footer-line {
+    flex-grow: 1;
+    height: 1px;
+    margin: 0 20px; /* 左右留一点间距 */
+}
+
+.footer-left {
+    flex-shrink: 0; /* 左侧文字不压缩 */
+}
+
+/*标题文字*/
+:root {
+    --ani-time: 0.65s;
+    --bg: #ffffff; /* 改成你的页面背景色 */
+}
+
+/* 文字外层容器 */
+.text-banner-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+/* 遮罩：初始盖住文字，动画向下移走 */
+.text-banner-wrap::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+    z-index: 10;
+    transition: transform var(--ani-time) ease-out;
+}
+
+/* 文字：初始在下方，动画向上升起 */
+.text-banner-wrap > div {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all var(--ani-time) ease-out;
+}
+
+/* 图片 从上至下挡板露出 */
+.banner-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-wrap::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+    z-index: 10;
+    transition: transform var(--ani-time) ease-out;
+}
+
+.banner-img {
+    width: 100%;
+    display: block;
+}
+
+/* 动画激活 */
+.ani-open .text-banner-wrap::before {
+    /* 遮罩 向下移出 */
+    transform: translateY(100%);
+}
+
+.ani-open .text-banner-wrap > div {
+    /* 文字 上升归位 + 渐显 */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ani-open .banner-wrap::before {
+    /* 图片挡板 向下移出 */
+    transform: translateY(100%);
+}
+
+/*项目简介*/
+.project-intro {
+    font-family: 'MiSans', sans-serif;
+}
+/*8020底部图片*/
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+.image-container img {
+    /* 初始高度为 0，只从顶部开始往下展开 */
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path 1.2s ease-out;
+}
+.image-container.in-view img {
+    /* 从上往下完整展开 */
+    clip-path: inset(0 0 0 0);
+}
+
+
+/* 高级柔和动画 + 保留空格 */
+ .hover-letter-animate {
+     white-space: pre-wrap;
+ }
+.hover-letter-animate span {
+    display: inline-block;
+    /* 核心：弹性曲线 + 长时间 = 超柔和 */
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.hover-letter-animate span:hover {
+    transform: translateY(-5px) scale(1.03);
+    cursor: pointer;
+}
+
+/*<!--    联系方式-->*/
+.slh{
+    line-height: 50px;
+}
+/* 返回顶部按钮 */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #111;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+.back-to-top:hover {
+    background: #000;
+    transform: translateY(-3px);
+}

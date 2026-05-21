@@ -146,30 +146,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 指示器
     function updateIndicator() {
-        let centerX = w / 2;
+        const centerX = w / 2;
         let minDis = Infinity;
         let nearIdx = 0;
+
         let s = scroll % totalWidth;
         if (s < 0) s += totalWidth;
 
-        for (let i = 0; i < cardList.length; i++) {
-            let x = i * step - s;
-            let cardCenterX = x + cardW / 2;
-            let dis = Math.abs(cardCenterX - centerX);
-            if (dis < minDis) {
-                minDis = dis;
-                nearIdx = i;
+        for (let o = -1; o <= 1; o++) {
+            for (let i = 0; i < cardList.length; i++) {
+
+                // ✅ 加入 o * totalWidth
+                const x = i * step - s + o * totalWidth;
+
+                const cardCenterX = x + cardW / 2;
+                const dis = Math.abs(cardCenterX - centerX);
+
+                if (dis < minDis) {
+                    minDis = dis;
+                    nearIdx = i;
+                }
             }
         }
 
         if (nearIdx === activeDot) return;
+
         activeDot = nearIdx;
 
         indicators.forEach(el => {
             el.className = "w-12 h-[2px] bg-gray-300 indicator-line";
         });
+
         if (indicators[activeDot]) {
-            indicators[activeDot].className = "w-24 h-[2px] bg-black indicator-line";
+            indicators[activeDot].className =
+                "w-24 h-[2px] bg-black indicator-line";
         }
     }
 

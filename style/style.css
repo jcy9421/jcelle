@@ -5,10 +5,6 @@
     font-style: normal;
     font-display: swap;
 }
-html, body {
-    overflow: hidden; /* 禁止页面滚动，完美隐藏滚动条 */
-    height: 100%;
-}
 
 @layer utilities {
     .scrollbar-hide::-webkit-scrollbar {

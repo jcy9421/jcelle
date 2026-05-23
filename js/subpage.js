@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
 
 
 window.addEventListener('scroll', () => {
-    if (!ticking) {
+    if (typeof updateVideo === 'function' && !ticking) {
         window.requestAnimationFrame(updateVideo);
         ticking = true;
     }

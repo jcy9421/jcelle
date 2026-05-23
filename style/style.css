@@ -1,6 +1,6 @@
 @font-face {
     font-family: "MyCustomFont";
-    src: url("../Fonts/houdihei.woff2") format("woff2");
+    src: url("../Fonts/houdihei.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;

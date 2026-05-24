@@ -35,12 +35,11 @@
     </style>
 </head>
 <body>
-<header class="fixed top-0 left-0 w-full bg-white z-50 px-6 py-10 flex justify-between items-center">
-    <div class="text-2xl font-bold tracking-tight">JCY</div>
-    <nav class="hidden md:flex space-x-16 text-base text-gray-400 ">
-        <!--        <a href="#" class="hover:text-black transition-colors">List</a>-->
-        <a href="index.html" class="hover:text-black  transition-colors border-black ">Projects</a>
-        <a href="about.html" class="text-black font-bold pb-1">About</a>
+<header class="fixed top-0 left-0 w-full backdrop-blur-sm bg-white/30 z-50 px-6 py-10 flex justify-between items-center">
+    <div class="text-2xl font-bold tracking-tight"><a href="index.html">JCY</a></div>
+    <nav class="hidden md:flex space-x-32 text-base text-gray-400 ">
+        <a href="index.html" class="text-black font-bold border-black pb-1">Projects</a>
+        <a href="about.html" class="hover:text-black transition-colors">About</a>
         <a href="contact.html" class="hover:text-black transition-colors">Contact</a>
     </nav>
 </header>
@@ -56,17 +55,21 @@
         <div class="text-xl italic  pb-2 text-animate-up">创意开发者，助力品牌在数字领域达成发展目标</div>
     </div>
     <!-- 个人信息-->
-    <div class="pt-24 relative">
-        <img src="images/jdp/jd1.webp" class="object-cover" alt="">
-    </div>
-    <div class="pt-20 text-4xl grid grid-cols-3">
-        <div class="col-span-2 ">I partner with brands and studios that care about clarity, craft and a
-            point of view. Let’s talk.
-        </div>
-    </div>
-    <div class="pt-16 text-4xl font-bold grid grid-cols-3">
-        <div class="col-span-2">
-            <a href="mailto:jcy9421@gmail.com" class="inherit-style">jcy9421@gmail.com</a>
+    <div class="relative flex items-end justify-between w-full pt-12 gap-10">
+        <img src="images/about/my.png" class="object-cover flex-shrink-0 h-auto" alt="">
+        <div class="about-text max-w-2xl text-base leading-relaxed">
+            <!-- 英文层（默认可见） -->
+            <span class="en-text">
+            I'm Jay Celle Yu, a creative developer from China with years of experience in web and mobile development. I've worked at design agencies, advertising agencies, and with multinational teams—experiences that have shaped the way I build digital experiences: with creativity, clarity, and attention to detail.
+            <br><br>
+            I’m a proactive person who enjoys creating through both design and development, always driven by curiosity, improvement, and new ideas. That same mindset shapes the way I approach life, with a deep appreciation for nature, meaningful experiences.
+        </span>
+            <!-- 中文层（默认透明） -->
+            <span class="zh-text">
+            我是 Jay Celle Yu，一名来自中国的创意开发者，在网页与移动开发领域有着多年经验。我曾就职于设计公司、广告公司及跨国团队，这些经历塑造了我构建数字体验的方式——创意、清晰、注重细节。
+            <br><br>
+            我是一个主动积极的人，乐于通过设计与开发去创造，好奇心、自我提升和新想法始终是我的驱动力。同样的心态也影响着我对待生活的方式：我深爱自然，珍视有意义的体验。
+        </span>
         </div>
     </div>
 <!--    footer-->

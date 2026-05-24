@@ -35,10 +35,9 @@
 </head>
 <body class="min-h-screen py-20">
 <!-- 顶部导航 -->
-<header class="fixed top-0 left-0 w-full bg-white z-50 px-6 py-10 flex justify-between items-center">
-    <div class="text-2xl font-bold tracking-tight">JCY</div>
-    <nav class="hidden md:flex space-x-16 text-base text-gray-400 ">
-<!--        <a href="#" class="hover:text-black transition-colors">List</a>-->
+<header class="fixed top-0 left-0 w-full backdrop-blur-sm bg-white/30 z-50 px-6 py-10 flex justify-between items-center">
+    <a href="index.html"><div class="text-2xl font-bold tracking-tight">JCY</div></a>
+    <nav class="hidden md:flex space-x-32 text-base text-gray-400 ">
         <a href="index.html" class="text-black font-bold border-black pb-1">Projects</a>
         <a href="about.html" class="hover:text-black transition-colors">About</a>
         <a href="contact.html" class="hover:text-black transition-colors">Contact</a>
@@ -46,7 +45,7 @@
 </header>
 
 <!-- 轮播主体 -->
-<canvas id="canvas" class="wrp"></canvas>
+<canvas id="canvas" class="wrp pt-16"></canvas>
 <!-- 底部信息 -->
 <footer class="fixed bottom-0 left-0 w-full bg-white px-6 py-5 flex items-center border-t border-gray-100">
     <!-- 左侧：固定宽度不挤压 -->

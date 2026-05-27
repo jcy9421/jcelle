@@ -240,3 +240,49 @@
 .about-text:hover .zh-text {
     opacity: 1;
 }
+
+.awards{
+    width:100%;
+    padding:120px 0px;
+}
+
+.award-row{
+    position:relative;
+    display:grid;
+    grid-template-columns: 180px 1fr 180px 1.5fr 1fr;
+    align-items:center;
+    padding:30px 0;
+    border-top:1px solid #111;
+    font-size:36px;
+    cursor:pointer;
+}
+
+.award-row:last-child{
+    border-bottom:1px solid #111;
+}
+
+.award-row span{
+    pointer-events:none;
+}
+
+/* 浮动图片 */
+
+.award-preview{
+    position:fixed;
+    top:0;
+    left:0;
+    width:320px;
+    height:220px;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:100;
+    opacity:0;
+    scale:.8;
+    will-change:transform;
+}
+
+.award-preview img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}

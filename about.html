@@ -214,6 +214,28 @@
         </div>
 
     </section>
+<!--    Awwwards-->
+    <section class="awards">
+        <div class="mb-8 flex justify-between items-center pr-24" >
+            <h2 class="text-3xl font-bold font-My col-span-1 mb-4">
+                Certificate
+            </h2>
+        </div>
+        <div class="award-row flex justify-between" data-image="images/about/google.png">
+            <span>Google</span>
+            <span>UX Design Professional Certificate</span>
+        </div>
+        <div class="award-row flex justify-between"  data-image="images/about/c2.png">
+            <span>Liaoning Normal University</span>
+            <span>Graduation Certificate</span>
+        </div>
+
+    </section>
+
+    <!-- 浮动图片 -->
+    <div class="award-preview">
+        <img src="" alt="">
+    </div>
 
     <!--    footer-->
     <div class="pt-20 text-4xl grid grid-cols-3">
@@ -284,18 +306,56 @@
         }
     }
 
-    gsap.registerPlugin(ScrollTrigger);
+    const preview = document.querySelector(".award-preview");
+    const previewImg = preview.querySelector("img");
 
-    const lenis = new Lenis({
-        smooth: true
+    const rows = document.querySelectorAll(".award-row");
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    let currentX = 0;
+    let currentY = 0;
+
+    /* 鼠标位置 */
+
+    window.addEventListener("mousemove",(e)=>{
+        mouseX = e.clientX + 40;
+        mouseY = e.clientY - 100;
     });
 
-    function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
+    /* lerp 跟随 */
 
-    requestAnimationFrame(raf);
+    gsap.ticker.add(()=>{
+        currentX += (mouseX - currentX) * 0.12;
+        currentY += (mouseY - currentY) * 0.12;
+        gsap.set(preview,{
+            x:currentX,
+            y:currentY
+        });
+    });
+    /* hover */
+    rows.forEach((row)=>{
+        row.addEventListener("mouseenter",()=>{
+            const image = row.dataset.image;
+            previewImg.src = image;
+            gsap.to(preview,{
+                opacity:1,
+                scale:1,
+                duration:.4,
+                ease:"power3.out"
+            });
+        });
+
+        row.addEventListener("mouseleave",()=>{
+            gsap.to(preview,{
+                opacity:0,
+                scale:.8,
+                duration:.35,
+                ease:"power3.out"
+            });
+        });
+    });
 </script>
 <script src="./js/subpage.js"></script>
 <script src="./js/JS.js"></script>

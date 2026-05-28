@@ -117,3 +117,27 @@ gsap.to(".gaobi-img", {
         scrub: true
     }
 });
+
+gsap.registerPlugin(ScrollTrigger);
+
+const image = document.querySelector(".long-image");
+const wrapper = document.querySelector(".right-panel");
+
+const imageHeight = image.offsetHeight;
+const wrapperHeight = wrapper.offsetHeight;
+
+const moveDistance = imageHeight - wrapperHeight;
+const speed = 0.3;
+gsap.to(image,{
+    y: -moveDistance,
+
+    ease:"none",
+
+    scrollTrigger:{
+        trigger:".case-study",
+        start:"top top",
+        end:`+=${moveDistance * speed}`,
+        scrub:true,
+        pin:false
+    }
+});

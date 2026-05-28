@@ -96,7 +96,7 @@
 
     <!-- 官网首页-->
     <div class="pt-24 relative gaobi">
-        <img src="images/sgcc/gaobi1.png" class="gaobi-img" alt="">
+        <img src="images/sgcc/gaobi1.webp" class="gaobi-img" alt="">
     </div>
 
     <div class="grid grid-cols-12 gap-12 pt-16">
@@ -106,26 +106,32 @@
         </div>
     </div>
 
-    <div class="relative grid grid-cols-2 pt-32 items-start overflow-hidden">
-        <div id="parallaxText" class="text-5xl project-intro grid app-intro pr-10 font-light">
-            <div class="gap-6" style="padding-top: 30rem;line-height: 3.5rem">
-                整体 UI 设计兼具国际商务质感、专业产业调性与现代极简美学，既彰显京东产发全球化企业实力，又以高级简约视觉塑造国际化品牌形象，适配海外商务受众浏览与品牌传播需求。
+    <section class="case-study">
+
+        <!-- 左侧 -->
+        <div class="left-panel">
+            <div class="sticky-content text-gray-900">
+
+                <div class="step active pt-20 text-2xl">
+                    <p>网站以“科技感 + 专业感 + 解决方案展示”为核心方向，通过大幅视觉、模块化结构与长页面叙事方式，建立企业可信度与行业形象。</p>
+                </div>
+
             </div>
         </div>
-        <div class="flex">
-            <img id="appImage" src="./images/jdp/app.webp" alt="" class="h-auto max-h-[200vh] w-auto">
+        <!-- 右侧 -->
+        <div class="right-panel">
+            <img src="images/sgcc/sgcc-long.webp" class="long-image" alt="">
         </div>
-    </div>
-
+    </section>
     <!-- 网页端 图片从上往下展开 -->
     <canvas id="carouselCanvas" class="w-full h-[500px] block cursor-grab"></canvas>
     <!--    其他作品链接-->
     <div class="flex justify-between items-center pt-24 pb-6">
-            <div class="text-4xl italic font-My">TOYO TRIES 仓储与增值服务小程序</div>
-            <div class="text-3xl"><a href="toyo.html">Next project</a></div>
+            <div class="text-4xl italic font-My">青春序</div>
+            <div class="text-3xl"><a href="young.html">Next project</a></div>
     </div>
     <div class="image-container">
-        <img class="" src="./images/trade/bottombanner.webp" alt="" srcset="">
+        <img class="" src="./images/sgcc/bottombanner.webp" alt="" srcset="">
     </div>
     <!--    合作-->
     <div class="pt-20 text-4xl grid grid-cols-3">
@@ -188,16 +194,17 @@
 
         // 👉 你的图片
         const imageSources = [
-            './images/jdp/c01.webp',
-            './images/jdp/c02.webp',
-            './images/jdp/c03.webp',
-            './images/jdp/c04.webp',
-            './images/jdp/c05.webp',
+            './images/sgcc/sgcc04.webp',
+            './images/sgcc/sgcc02.webp',
+            './images/sgcc/sgcc03.webp',
+            './images/sgcc/sgcc01.webp',
+            './images/sgcc/sgcc05.webp',
         ];
 
         // 🔥 核心：全部调慢，手感更高级
         const GAP = 24;
         let IMG_WIDTH = 0;
+        const FIXED_HEIGHT = 600;
         let IMG_HEIGHT = 0;
         let offsetX = 0;
         let isDragging = false;
@@ -224,10 +231,9 @@
             img.src = src;
             img.onload = () => {
                 loadedCount++;
-                if (loadedCount === 1) {
-                    IMG_WIDTH = img.width;
-                    IMG_HEIGHT = img.height;
-                }
+                img.renderHeight = FIXED_HEIGHT;
+                img.renderWidth =
+                    img.width * (FIXED_HEIGHT / img.height);
                 if (loadedCount === imageSources.length) draw();
             };
             images.push(img);
@@ -236,22 +242,44 @@
         // 绘制
         function draw() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            const totalStep = IMG_WIDTH + GAP;
-            const totalLength = totalStep * images.length;
-
             if (!isDragging) {
                 velocity *= FRICTION;
                 offsetX += velocity;
             }
+            // 计算所有图片总长度
+            let totalLength = 0;
+
+            images.forEach(img => {
+                totalLength += img.renderWidth + GAP;
+            });
 
             let loopX = offsetX % totalLength;
+
             if (loopX > 0) loopX -= totalLength;
 
-            [-1, 0, 1].forEach((set) => {
-                images.forEach((img, i) => {
-                    const x = (canvas.width - IMG_WIDTH) / 2 + loopX + i * totalStep + set * totalLength;
-                    const y = (canvas.height - IMG_HEIGHT) / 2;
-                    if (img.complete) ctx.drawImage(img, x, y, IMG_WIDTH, IMG_HEIGHT);
+            [-1, 0, 1].forEach(set => {
+
+                let currentX =
+                    (canvas.width / 2) + loopX + set * totalLength;
+
+                images.forEach((img) => {
+
+                    const x = currentX;
+                    const y =
+                        (canvas.height - img.renderHeight) / 2;
+
+                    if (img.complete) {
+
+                        ctx.drawImage(
+                            img,
+                            x,
+                            y,
+                            img.renderWidth,
+                            img.renderHeight
+                        );
+                    }
+
+                    currentX += img.renderWidth + GAP;
                 });
             });
 
@@ -297,6 +325,7 @@
             isDragging = false;
         });
     });
+
 </script>
 
 </body>

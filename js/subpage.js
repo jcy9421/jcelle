@@ -105,3 +105,15 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".gaobi-img", {
+    scale: 1.08,
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".gaobi",
+        start: "top 50%",
+        end: "bottom top",
+        scrub: true
+    }
+});

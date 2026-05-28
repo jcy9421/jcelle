@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         {img: "images/jd-car4.webp", text: "8020 Trade", link: 'trade.html'},
         {img: "images/jd-car5.webp", text: "Toyo tries", link: 'toyo.html'},
         {img: "images/jd-car1.webp", text: "国网无人机巡检", link: 'sgcc.html'},
-        {img: "images/jd-car3.webp", text: "青春序", link: 'err.html'},
+        {img: "images/jd-car3.webp", text: "青春序", link: 'young.html'},
         {img: "images/jd-car7.webp", text: "Other Design", link: 'err.html'}
     ];
 

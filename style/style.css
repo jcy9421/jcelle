@@ -302,3 +302,34 @@
 
     will-change: transform;
 }
+.case-study{
+    display:flex;
+    padding:120px 0;
+    gap:80px;
+    background:#fff;
+    color:#fff;
+}
+
+/* 左侧 */
+.left-panel{
+    width:40%;
+}
+
+.sticky-content{
+    position:sticky;
+    top:120px;
+}
+
+/* 右侧 */
+.right-panel{
+    width:65%;
+    height:100vh;
+    overflow:hidden;
+    position:sticky;
+    top:0;
+}
+
+.long-image{
+    width:100%;
+    will-change:transform;
+}

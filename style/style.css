@@ -294,9 +294,8 @@
 }
 
 .gaobi-img{
-    width: 1038px;
+    width: 100%;
     display: block;
-
     transform: scale(1);
     transform-origin: center center;
 
@@ -304,7 +303,7 @@
 }
 .case-study{
     display:flex;
-    padding:120px 0;
+    padding:80px 0;
     gap:80px;
     background:#fff;
     color:#fff;

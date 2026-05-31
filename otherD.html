@@ -3,56 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Other Designs | J.Celle</title>
-    <meta name="description" content="Other — J.Celle Yu 作品集">
-    <meta property="og:title" content="Other Designs | J.Celle Yu">
-    <meta property="og:description" content="UX/UI及品牌设计，兼顾 Web">
-    <meta property="og:type" content="website">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>J</text></svg>">
-    <link rel="stylesheet" href="./style/style.css">
+    <title>Work List</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/misans@3.0.0/css/misans.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <style>
-        .carousel-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .font-My {
-            font-family: "MyCustomFont", sans-serif;
-            display: block;
-        }
-
-        nav {
-            font-size: 20px !important;
-        }
-
-        video {
-            width: 60%;
-            height: auto;
-            object-fit: cover;
-        }
-
-        #carouselCanvas {
-            display: block;
-            width: 100%;
-            height: 700px;
-            cursor: grab;
-        }
-
-    </style>
+    <link rel="stylesheet" href="/style/otherstyle.css">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
-<body class="min-h-screen pt-20 px-6">
-
-<!-- 返回顶部按钮 -->
-<div class="back-to-top" id="">↑</div>
-
-<!-- 顶部导航 -->
+<body>
 <header class="fixed top-0 left-0 w-full backdrop-blur-sm bg-white/30 z-50 px-6 py-10 flex justify-between items-center">
-    <a href="index.html"><div class="text-2xl font-bold tracking-tight">JCY</div></a>
+    <a href="index.html">
+        <div class="text-2xl font-bold text-black tracking-tight">JCY</div>
+    </a>
     <nav class="hidden md:flex space-x-32 text-base text-gray-400 ">
         <a href="index.html" class="text-black font-bold border-black pb-1">Projects</a>
         <a href="about.html" class="hover:text-black transition-colors">About</a>
@@ -60,71 +21,66 @@
     </nav>
 </header>
 
-<!--title-->
-<div class="wrp">
-    <div class="text-banner-wrap ">
-        <div class="text-8xl italic pt-40 pb-8 font-My text-animate-up">Other Designs</div>
-    </div>
-    <div class="banner-wrap image-container">
-        <img class="banner-img scroll-scale-img" src="images/other/otherbanner.png" alt="" srcset="">
-    </div>
+<div class="wrp pt-16 text-black">
+    <section class="works">
+        <a href="#" class="work-item"
+           data-img="./images/other/icon01.webp">
 
-    <!-- 项目信息-->
-    <div class="grid grid-cols-12 gap-12 pt-16">
-        <div class="grid-cols-none"></div>
-        <div class="grid-rows-5 text-gray-500 text-xl font-normal">
-<!--            <div class="pb-4">地点</div>-->
-            <div class="pb-4">类型</div>
-            <div class="pb-4">行业</div>
-        </div>
-        <div class="grid-rows-4 col-span-2 font-medium text-xl">
-<!--            <div class="pb-4">全球</div>-->
-            <div class="pb-4">Web </div>
-            <div class="pb-4">美妆</div>
-        </div>
-    </div>
+            <span class="num">01</span>
+            <h2 class="title">Icon design</h2>
+            <span class="year">2022</span>
+        </a>
+        <a href="#" class="work-item"
+           data-img="./images/other/other05.webp">
+            <span class="num">02</span>
+            <h2 class="title">3D Icon design</h2>
+            <span class="year">2024</span>
 
-    <!-- 项目简介-->
-    <div class="grid grid-cols-12 gap-12 pt-6">
-        <div class="grid-cols-none col-span-4"></div>
-        <div class="col-span-7 text-2xl font-light project-intro">
-            青春序以现代科技美学为核心，专注智能美容产品的用户体验设计，同时携手合作品牌打造专属 Web 官网。我们融合东方视觉语言与简约交互逻辑，搭建兼具科技感、品质感与情绪体验的品牌界面系统，为用户带来自然、舒适且富有仪式感的数字化美容体验 </div>
-    </div>
-    <!-- 官网首页-->
-    <div class="pt-24 relative gaobi">
-        <img src="images/young/youngweb.png" class="gaobi-img" alt="">
-    </div>
+        </a>
+        <a href="#" class="work-item"
+           data-img="./images/other/other02.webp">
 
-    <div class="grid grid-cols-12 gap-12 pt-16">
-        <div class="col-span-2 grid-cols-none"></div>
-        <div class="col-span-8 font-light project-intro text-3xl">
-            现代简约风格网页设计，以青绿色系为主色调，融合留白、水墨质感等东方美学元素，通过模块化卡片布局和简洁排版，营造出清新自然且富有东方韵味的视觉体验。    </div>
-</div>
-    <section class="case-study pb-0">
-        <!-- 左侧 -->
-        <div class="left-panel">
-            <div class="sticky-content text-gray-900">
-                <div class="step active text-2xl">
-                </div>
+            <span class="num">03</span>
+            <h2 class="title">能源视界-国网全景平台LOGO</h2>
+            <span class="year">2024</span>
 
-            </div>
-        </div>
-        <!-- 右侧 -->
-        <div class="relative gaobi">
-            <img src="images/young/youngweb02.png" class="gaobi-img" alt="">
-        </div>
+        </a>
+
+        <a href="#" class="work-item"
+           data-img="./images/other/other03.webp">
+            <span class="num">04</span>
+            <h2 class="title">无人机充电产品LOGO</h2>
+            <span class="year">2024</span>
+
+        </a>
+
+        <a href="#" class="work-item"
+           data-img="./images/other/other04.webp">
+            <span class="num">05</span>
+            <h2 class="title">北京市属公园票务公司LOGO</h2>
+            <span class="year">2020</span>
+
+        </a>
+
+        <a href="#" class="work-item"
+           data-img="./images/other/other06.webp">
+            <span class="num">06</span>
+            <h2 class="title">8020 Trade 推特日常海报</h2>
+            <span class="year">2025</span>
+
+        </a>
+        <a href="#" class="work-item"
+           data-img="./images/other/other07.webp">
+            <span class="num">07</span>
+            <h2 class="title">Other</h2>
+            <span class="year">2023</span>
+
+        </a>
     </section>
-    <!-- 网页端 图片从上往下展开 -->
-    <canvas id="carouselCanvas" class="w-full h-[530px] block cursor-grab"></canvas>
-    <!--    其他作品链接-->
-    <div class="flex justify-between items-center pt-24 pb-6">
-            <div class="text-4xl italic font-My">青春序</div>
-            <div class="text-3xl"><a href="young.html">Next project</a></div>
+
+    <div class="preview">
+        <div class="preview-inner"></div>
     </div>
-    <div class="image-container">
-        <img class="" src="./images/young/btbanner.png" alt="" srcset="">
-    </div>
-    <!--    合作-->
     <div class="pt-20 text-4xl grid grid-cols-3">
         <div class="col-span-2 ">I partner with brands and studios that care about clarity, craft and a
             point of view. Let’s talk.
@@ -170,150 +126,67 @@
             </div>
         </div>
     </div>
+    <div class="flex justify-between items-center pt-16 pb-4">
+        <div class="font-light"><span class="font-bold">© 2026</span> All rights reserved</div>
+        <div id="backToTop" class="cursor-pointer">Back to top</div>
+    </div>
 </div>
-<div class="flex justify-between items-center pt-16 pb-4">
-    <div class="font-light"><span class="font-bold">© 2026</span> All rights reserved</div>
-    <div id="backToTop" class="cursor-pointer">Back to top</div>
-</div>
-<script src="./js/subpage.js"></script>
-<script src="./js/JS.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="js/JS.js"></script>
+
 <script>
-    // ==============================================
-    document.addEventListener('DOMContentLoaded', () => {
-        const canvas = document.getElementById('carouselCanvas');
-        const ctx = canvas.getContext('2d');
 
-        // 👉 你的图片
-        const imageSources = [
-            './images/young/young01.png',
-            './images/young/young03.png',
-            './images/young/young04.png',
-            './images/young/young05.png',
-        ];
+    const preview = document.querySelector(".preview");
+    const previewInner = document.querySelector(".preview-inner");
 
-        // 🔥 核心：全部调慢，手感更高级
-        const GAP = 24;
-        let IMG_WIDTH = 0;
-        const FIXED_HEIGHT = 600;
-        let IMG_HEIGHT = 0;
-        let offsetX = 0;
-        let isDragging = false;
-        let startX = 0;
-        let lastOffset = 0;
-        let velocity = 0;
-        const FRICTION = 0.93;      // 减速更强
-        const DRAG_SPEED = 0.35;    // 🔥 拖拽速度降低（越小越慢）
+    document.querySelectorAll(".work-item").forEach(item => {
 
-        const images = [];
-        let loadedCount = 0;
+        item.addEventListener("mouseenter", () => {
 
-        // 自适应画布
-        function resizeCanvas() {
-            canvas.width = canvas.offsetWidth;
-            canvas.height = canvas.offsetHeight;
-        }
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
+            const img = item.dataset.img;
 
-        // 加载图片
-        imageSources.forEach((src) => {
-            const img = new Image();
-            img.src = src;
-            img.onload = () => {
-                loadedCount++;
-                img.renderHeight = FIXED_HEIGHT;
-                img.renderWidth =
-                    img.width * (FIXED_HEIGHT / img.height);
-                if (loadedCount === imageSources.length) draw();
-            };
-            images.push(img);
-        });
+            previewInner.style.backgroundImage =
+                `url(${img})`;
 
-        // 绘制
-        function draw() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            if (!isDragging) {
-                velocity *= FRICTION;
-                offsetX += velocity;
-            }
-            // 计算所有图片总长度
-            let totalLength = 0;
-
-            images.forEach(img => {
-                totalLength += img.renderWidth + GAP;
+            gsap.to(preview, {
+                opacity: 1,
+                duration: 0.35,
+                ease: "power2.out"
             });
 
-            let loopX = offsetX % totalLength;
-
-            if (loopX > 0) loopX -= totalLength;
-
-            [-1, 0, 1].forEach(set => {
-
-                let currentX =
-                    (canvas.width / 2) + loopX + set * totalLength;
-
-                images.forEach((img) => {
-
-                    const x = currentX;
-                    const y =
-                        (canvas.height - img.renderHeight) / 2;
-
-                    if (img.complete) {
-
-                        ctx.drawImage(
-                            img,
-                            x,
-                            y,
-                            img.renderWidth,
-                            img.renderHeight
-                        );
-                    }
-
-                    currentX += img.renderWidth + GAP;
-                });
+            gsap.to(previewInner, {
+                scale: 1.05,
+                duration: 0.8,
+                ease: "power3.out"
             });
 
-            requestAnimationFrame(draw);
-        }
-
-        // 🔥 拖拽速度降低
-        canvas.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            startX = e.clientX;
-            lastOffset = offsetX;
-            velocity = 0;
-            canvas.style.cursor = 'grabbing';
         });
 
-        window.addEventListener('mousemove', (e) => {
-            if (!isDragging) return;
-            const dx = (e.clientX - startX) * DRAG_SPEED; // 🔥 这里减速
-            offsetX = lastOffset + dx;
-            velocity = dx * 0.5; // 惯性也减速
+        item.addEventListener("mouseleave", () => {
+
+            gsap.to(preview, {
+                opacity: 0,
+                duration: 0.25
+            });
+
+            gsap.to(previewInner, {
+                scale: 1,
+                duration: 0.5
+            });
+
         });
 
-        window.addEventListener('mouseup', () => {
-            isDragging = false;
-            canvas.style.cursor = 'grab';
+        item.addEventListener("mousemove", (e) => {
+
+            gsap.to(preview, {
+                x: e.clientX + 40,
+                y: e.clientY - 40,
+                duration: 0.4,
+                ease: "power3.out"
+            });
+
         });
 
-        // 移动端触摸
-        canvas.addEventListener('touchstart', (e) => {
-            isDragging = true;
-            startX = e.touches[0].clientX;
-            lastOffset = offsetX;
-            velocity = 0;
-        });
-
-        window.addEventListener('touchmove', (e) => {
-            if (!isDragging) return;
-            const dx = (e.touches[0].clientX - startX) * DRAG_SPEED;
-            offsetX = lastOffset + dx;
-        });
-
-        window.addEventListener('touchend', () => {
-            isDragging = false;
-        });
     });
 
 </script>

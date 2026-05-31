@@ -183,30 +183,6 @@
         const canvas = document.getElementById('carouselCanvas');
         const ctx = canvas.getContext('2d');
 
-        // 👉 你的图片
-        const imageSources = [
-            './images/young/young01.webp',
-            './images/young/young03.webp',
-            './images/young/young04.webp',
-            './images/young/young05.webp',
-        ];
-
-        // 🔥 核心：全部调慢，手感更高级
-        const GAP = 24;
-        let IMG_WIDTH = 0;
-        const FIXED_HEIGHT = 600;
-        let IMG_HEIGHT = 0;
-        let offsetX = 0;
-        let isDragging = false;
-        let startX = 0;
-        let lastOffset = 0;
-        let velocity = 0;
-        const FRICTION = 0.93;      // 减速更强
-        const DRAG_SPEED = 0.35;    // 🔥 拖拽速度降低（越小越慢）
-
-        const images = [];
-        let loadedCount = 0;
-
         // 自适应画布
         function resizeCanvas() {
             canvas.width = canvas.offsetWidth;

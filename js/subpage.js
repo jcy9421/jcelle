@@ -122,7 +122,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const image = document.querySelector(".long-image");
 const wrapper = document.querySelector(".right-panel");
-
 const imageHeight = image.offsetHeight;
 const wrapperHeight = wrapper.offsetHeight;
 
@@ -141,3 +140,63 @@ gsap.to(image,{
         pin:false
     }
 });
+
+
+const preview = document.querySelector(".preview");
+const previewInner = document.querySelector(".preview-inner");
+
+document.querySelectorAll(".work-item").forEach(item => {
+
+    item.addEventListener("mouseenter", () => {
+
+        const img = item.dataset.img;
+
+        previewInner.style.backgroundImage =
+            `url(${img})`;
+
+        gsap.to(preview,{
+            opacity:1,
+            duration:0.35,
+            ease:"power2.out"
+        });
+
+        gsap.to(previewInner,{
+            scale:1.05,
+            duration:0.8,
+            ease:"power3.out"
+        });
+
+    });
+
+    item.addEventListener("mouseleave", () => {
+
+        gsap.to(preview,{
+            opacity:0,
+            duration:0.25
+        });
+
+        gsap.to(previewInner,{
+            scale:1,
+            duration:0.5
+        });
+
+    });
+
+    item.addEventListener("mouseenter",()=>{
+        gsap.to(preview,{
+            opacity:1,
+            duration:.3
+        });
+
+    });
+    item.addEventListener("mouseleave",()=>{
+
+        gsap.to(preview,{
+            opacity:0,
+            duration:.3
+        });
+
+    });
+
+});
+

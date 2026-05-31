@@ -182,7 +182,28 @@
     document.addEventListener('DOMContentLoaded', () => {
         const canvas = document.getElementById('carouselCanvas');
         const ctx = canvas.getContext('2d');
+        // 👉 你的图片
+        const imageSources = [
+            './images/young/young01.webp',
+            './images/young/young03.webp',
+            './images/young/young04.webp',
+            './images/young/young05.webp',
+        ];
 
+        // 🔥 核心：全部调慢，手感更高级
+        const GAP = 24;
+        let IMG_WIDTH = 0;
+        const FIXED_HEIGHT = 600;
+        let IMG_HEIGHT = 0;
+        let offsetX = 0;
+        let isDragging = false;
+        let startX = 0;
+        let lastOffset = 0;
+        let velocity = 0;
+        const FRICTION = 0.93;      // 减速更强
+        const DRAG_SPEED = 0.35;    // 🔥 拖拽速度降低（越小越慢）
+        const images = [];
+        let loadedCount = 0;
         // 自适应画布
         function resizeCanvas() {
             canvas.width = canvas.offsetWidth;
@@ -220,22 +241,15 @@
             });
 
             let loopX = offsetX % totalLength;
-
             if (loopX > 0) loopX -= totalLength;
-
             [-1, 0, 1].forEach(set => {
-
                 let currentX =
                     (canvas.width / 2) + loopX + set * totalLength;
-
                 images.forEach((img) => {
-
                     const x = currentX;
                     const y =
                         (canvas.height - img.renderHeight) / 2;
-
                     if (img.complete) {
-
                         ctx.drawImage(
                             img,
                             x,

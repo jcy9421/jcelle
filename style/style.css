@@ -298,7 +298,6 @@
     display: block;
     transform: scale(1);
     transform-origin: center center;
-
     will-change: transform;
 }
 .case-study{

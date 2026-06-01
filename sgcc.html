@@ -107,20 +107,17 @@
     </div>
 
     <section class="case-study">
-
         <!-- 左侧 -->
         <div class="left-panel">
             <div class="sticky-content text-gray-900">
-
                 <div class="step active pt-20 text-2xl">
                     <p>网站以“科技感 + 专业感 + 解决方案展示”为核心方向，通过大幅视觉、模块化结构与长页面叙事方式，建立企业可信度与行业形象。</p>
                 </div>
-
             </div>
         </div>
         <!-- 右侧 -->
         <div class="right-panel">
-            <img src="images/sgcc/sgcc-long.webp" class="long-image" alt="">
+            <img src="/images/sgcc/sgcc-long.webp" class="long-image" alt="">
         </div>
     </section>
     <!-- 网页端 图片从上往下展开 -->
@@ -248,28 +245,19 @@
             }
             // 计算所有图片总长度
             let totalLength = 0;
-
             images.forEach(img => {
                 totalLength += img.renderWidth + GAP;
             });
-
             let loopX = offsetX % totalLength;
-
             if (loopX > 0) loopX -= totalLength;
-
             [-1, 0, 1].forEach(set => {
-
                 let currentX =
                     (canvas.width / 2) + loopX + set * totalLength;
-
                 images.forEach((img) => {
-
                     const x = currentX;
                     const y =
                         (canvas.height - img.renderHeight) / 2;
-
                     if (img.complete) {
-
                         ctx.drawImage(
                             img,
                             x,

@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     canvas.height = h;
 
     const cardW = 420;
-    const cardH = 680;
+    const cardH = 750;
     const gap = 20;
     const step = cardW + gap;
 

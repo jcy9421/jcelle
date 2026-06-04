@@ -11,6 +11,8 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>J</text></svg>">
     <link rel="stylesheet" href="./style/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/misans@3.0.0/css/misans.min.css">
     <style>
         .carousel-item img {
@@ -116,18 +118,20 @@
         </div>
     </div>
 
-    <div class="relative grid grid-cols-2 pt-32 items-start overflow-hidden">
-        <div id="parallaxText" class="text-5xl project-intro grid app-intro pr-10 font-light">
-            <div class="gap-6" style="padding-top: 30rem;line-height: 3.5rem">
-                Basing the design on clean and modern editorial aesthetics, I created a visually striking website that
-                effectively communicates the security, transparency, and decentralized spirit of the 8020trade
-                self-custodial wallet.
+    <section class="case-study trade-case-study">
+        <div class="left-panel trade-case-study__copy">
+            <div class="sticky-content text-gray-900">
+                <div class="step active pt-20 text-4xl project-intro font-light trade-case-study__text">
+                    Basing the design on clean and modern editorial aesthetics, I created a visually striking website
+                    that effectively communicates the security, transparency, and decentralized spirit of the 8020trade
+                    self-custodial wallet.
+                </div>
             </div>
         </div>
-        <div class="flex">
-            <img id="appImage" src="./images/trade/app.webp" alt="" class="h-auto max-h-[200vh] w-auto">
+        <div class="right-panel trade-case-study__media">
+            <img src="./images/trade/app.webp" alt="" class="long-image trade-case-study__image">
         </div>
-    </div>
+    </section>
 
     <!-- 网页端 图片从上往下展开 -->
     <div class="flex w-full pt-6">

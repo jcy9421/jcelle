@@ -281,13 +281,13 @@
     object-fit:cover;
 }
 
-.gaobi{
+.scroll-zoom-frame{
     width: 1038px;
     overflow: hidden;
     position: relative;
 }
 
-.gaobi-img{
+.scroll-zoom-image{
     width: 100%;
     display: block;
     transform: scale(1);

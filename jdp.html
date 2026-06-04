@@ -12,6 +12,8 @@
           href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>J</text></svg>">
     <link rel="stylesheet" href="./style/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/misans@3.0.0/css/misans.min.css">
     <style>
         .carousel-item img {
@@ -96,8 +98,8 @@
     </div>
 
     <!-- 官网首页-->
-    <div class="pt-24 relative">
-        <img src="images/jdp/jd1.webp" class="object-cover" alt="">
+    <div class="pt-24 relative scroll-zoom-frame">
+        <img src="images/jdp/jd1.webp" class="scroll-zoom-image" alt="">
     </div>
 
     <div class="grid grid-cols-12 gap-12 pt-16">
@@ -108,16 +110,18 @@
         </div>
     </div>
 
-    <div class="relative grid grid-cols-2 pt-32 items-start overflow-hidden">
-        <div id="parallaxText" class="text-5xl project-intro grid app-intro pr-10 font-light">
-            <div class="gap-6" style="padding-top: 30rem;line-height: 3.5rem">
+    <section class="case-study jdp-case-study">
+        <div class="left-panel jdp-case-study__copy">
+            <div class="sticky-content text-gray-900">
+                <div class="step active pt-20 text-4xl project-intro font-light jdp-case-study__text">
                 整体 UI 设计兼具国际商务质感、专业产业调性与现代极简美学，既彰显京东产发全球化企业实力，又以高级简约视觉塑造国际化品牌形象，适配海外商务受众浏览与品牌传播需求。
+                </div>
             </div>
         </div>
-        <div class="flex">
-            <img id="appImage" src="./images/jdp/app.webp" alt="" class="h-auto max-h-[200vh] w-auto">
+        <div class="right-panel jdp-case-study__media">
+            <img src="./images/jdp/jdp_long.webp" alt="" class="long-image jdp-case-study__image">
         </div>
-    </div>
+    </section>
 
     <!-- 网页端 图片从上往下展开 -->
     <canvas id="carouselCanvas" class="w-full h-[500px] block cursor-grab"></canvas>

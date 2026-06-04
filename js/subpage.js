@@ -105,41 +105,57 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".gaobi-img", {
-    scale: 1.08,
-    ease: "none",
-    scrollTrigger: {
-        trigger: ".gaobi",
-        start: "top 50%",
-        end: "bottom top",
-        scrub: true
+    if (document.querySelector(".scroll-zoom-image") && document.querySelector(".scroll-zoom-frame")) {
+        gsap.to(".scroll-zoom-image", {
+            scale: 1.08,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".scroll-zoom-frame",
+                start: "top 50%",
+                end: "bottom top",
+                scrub: true
+            }
+        });
     }
-});
 
-gsap.registerPlugin(ScrollTrigger);
+    const image = document.querySelector(".case-study .long-image");
+    const wrapper = document.querySelector(".case-study .right-panel");
+    const caseStudy = document.querySelector(".case-study");
 
-const image = document.querySelector(".long-image");
-const wrapper = document.querySelector(".right-panel");
-const imageHeight = image.offsetHeight;
-const wrapperHeight = wrapper.offsetHeight;
+    function setupCaseStudyScroll() {
+        const imageHeight = image.offsetHeight;
+        const wrapperHeight = wrapper.offsetHeight;
+        const moveDistance = imageHeight - wrapperHeight;
 
-const moveDistance = imageHeight - wrapperHeight;
-const speed = 0.3;
-gsap.to(image,{
-    y: -moveDistance,
+        if (moveDistance <= 0) {
+            return;
+        }
 
-    ease:"none",
-
-    scrollTrigger:{
-        trigger:".case-study",
-        start:"top top",
-        end:`+=${moveDistance * speed}`,
-        scrub:true,
-        pin:false
+        const speed = 0.3;
+        gsap.to(image, {
+            y: -moveDistance,
+            ease: "none",
+            scrollTrigger: {
+                trigger: caseStudy,
+                start: "top top",
+                end: `+=${moveDistance * speed}`,
+                scrub: true,
+                pin: false
+            }
+        });
     }
-});
+
+    if (image && wrapper && caseStudy) {
+        if (image.complete) {
+            setupCaseStudyScroll();
+        } else {
+            image.addEventListener('load', setupCaseStudyScroll, {once: true});
+        }
+    }
+}
 
 
 const preview = document.querySelector(".preview");
@@ -199,4 +215,3 @@ document.querySelectorAll(".work-item").forEach(item => {
     });
 
 });
-

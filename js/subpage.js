@@ -108,12 +108,12 @@ document.addEventListener('DOMContentLoaded', function () {
 if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
 
-    if (document.querySelector(".gaobi-img") && document.querySelector(".gaobi")) {
-        gsap.to(".gaobi-img", {
+    if (document.querySelector(".scroll-zoom-image") && document.querySelector(".scroll-zoom-frame")) {
+        gsap.to(".scroll-zoom-image", {
             scale: 1.08,
             ease: "none",
             scrollTrigger: {
-                trigger: ".gaobi",
+                trigger: ".scroll-zoom-frame",
                 start: "top 50%",
                 end: "bottom top",
                 scrub: true
